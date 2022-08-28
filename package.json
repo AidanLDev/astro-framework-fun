@@ -1,5 +1,5 @@
 {
-  "name": "@example/basics",
+  "name": "astro-framework-fun",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -10,6 +10,27 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "astro": "^1.1.1"
+    "@astrojs/lit": "^1.0.0",
+    "@astrojs/netlify": "^1.0.1",
+    "@astrojs/preact": "^1.0.2",
+    "@astrojs/react": "latest",
+    "@astrojs/sitemap": "latest",
+    "@astrojs/solid-js": "^1.1.0",
+    "@astrojs/svelte": "^1.0.0",
+    "@astrojs/vue": "^1.0.0",
+    "@webcomponents/template-shadowroot": "^0.1.0",
+    "astro": "latest",
+    "lit": "^2.3.1",
+    "preact": "^10.10.6",
+    "prettier": "^2.7.1",
+    "prettier-plugin-astro": "^0.5.3",
+    "react": "latest",
+    "react-dom": "latest",
+    "solid-js": "^1.5.1",
+    "svelte": "^3.49.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.17",
+    "sass": "^1.54.5"
   }
 }
