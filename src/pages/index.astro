@@ -5,39 +5,45 @@ import Card from "../components/Card.astro";
 const frameworks = [
 	{
 		title: 'React',
-		body: "React, the most used web framework by a longshot, created by Facebook and still maintained by 'Meta', this framework has such a big community you will never be alone when it comes to integrating third party packages or debugging problems."
+		body: "React, the most used web framework by a longshot, created by Facebook and still maintained by 'Meta', this framework has such a big community you will never be alone when it comes to integrating third party packages or debugging problems.",
+		link: '/react'
 	},
 	{
 		title: 'Svelte',
-		body: 'The most popular web framework of recent times, this is a compiler, unlike React/Angular that ship a JavaScript run time to the browser. This makes Svelte high performing while maintaining a small package.'
+		body: 'The most popular web framework of recent times, this is a compiler, unlike React/Angular that ship a JavaScript run time to the browser. This makes Svelte high performing while maintaining a small package.',
+		link: '/svelte'
 	},
 	{
 		title: 'Lit',
-		body: 'A lightweight framework with a footprint of around 5 KB when compressed.'
+		body: 'A lightweight framework with a footprint of around 5 KB when compressed.',
+		link: '/lit'
 	},
 	{
 		title: 'Preact',
-		body: 'A fast React alternative, with a boasted 3 KB footprint'
+		body: 'A fast React alternative, with a boasted 3 KB footprint',
+		link: '/preact'
 	},
 	{
 		title: 'Solid',
 		body: 'This framework has no Virtual DOM, making it effecient.',
+		link: '/solid'
 	},
 	{
 		title: 'Vue',
-		body: 'One of the most popular web frameworks, coming just behind Angular in the 2022 Stackoverflow survey, it has a big commited community making getting support for your deving easy.'
+		body: 'One of the most popular web frameworks, coming just behind Angular in the 2022 Stackoverflow survey, it has a big commited community making getting support for your deving easy.',
+		link: '/vue'
 	}
 ]
 ---
 
-<Layout title="Astro Boilerplate">
+<Layout title="Framework Fun">
 	<main>
-		<h1>Welcome to <span class="text-gradient">This Astro Boilerplate</span></h1>
+		<h1>Welcome to <span class="text-gradient">Framework fun</span></h1>
 		<p class="instructions">
 			Check out the <code>src/pages</code> directory to get started.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-		{frameworks.map(framework => <Card logo={`${framework.title}.png`} body={framework.body} title={framework.title}/>)}
+		{frameworks.map(framework => <Card logo={`${framework.title}.png`} body={framework.body} title={framework.title} link={framework.link}/>)}
 	</main>
 </Layout>
 
@@ -48,12 +54,6 @@ const frameworks = [
 
 	h1 {
 		margin: 2rem 0;
-	}
-
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 60ch;
 	}
 
 	.text-gradient {

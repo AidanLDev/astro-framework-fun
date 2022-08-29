@@ -4,21 +4,23 @@ export interface Props {
 	title: string;
 	body: string;
 	logo: string;
+	link: string;
 }
 
-const { logo, title, body } = Astro.props as Props;
+const { logo, title, body, link } = Astro.props as Props;
 ---
-
-<li class="link-card">
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<Img src={logo} alt={title} />
-		<p>
-			{body}
-		</p>
-</li>
+<a href={link}>
+	<li class="link-card">
+			<h2>
+				{title}
+				<span>&rarr;</span>
+			</h2>
+			<Img src={logo} alt={title} />
+			<p>
+				{body}
+			</p>
+	</li>
+</a>
 <style>
 	:root {
 		--link-gradient: linear-gradient(45deg, #4f39fa, #da62c4 30%, var(--color-border) 60%);
@@ -33,6 +35,7 @@ const { logo, title, body } = Astro.props as Props;
 		border-radius: 0.5rem;
 		background-position: 100%;
 		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+		cursor: pointer;
 	}
 
 	.link-card > a {

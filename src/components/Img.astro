@@ -11,4 +11,4 @@ export interface Props {
 const { width, height, src, alt } = Astro.props as Props;
 ---
 
-<Image width={width || 300} height={height || 300}  src={import(`../../public/images/${src}`)} alt={alt} />
+<Image width={width || 100} height={height || 100}  src={import(`../../public/images/${src}`)} alt={alt} />

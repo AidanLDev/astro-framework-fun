@@ -22,6 +22,7 @@
       "@images/*": ["public/images/*"],
       "@styles/*": ["src/styles/*"]
     },
-    "types": ["@astro/image/client"]
+    "types": ["@astro/image/client"],
+    "jsx": "react-jsx",
   }
 }

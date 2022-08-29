@@ -19,9 +19,11 @@ const { title } = Astro.props as Props;
 	</head>
 	<Nav />
 	<body>
+		<main>
 		<slot>
 			<p>Well come on, put some content in me</p> <!--	Will be used as a placeholder if no children are passed to the component  -->
 		</slot> <!--	Slot is the React equiv of {children} -->
+	</main>
 	</body>
 </html>
 <style>
@@ -57,5 +59,11 @@ const { title } = Astro.props as Props;
 	:global(code) {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	main {
+		margin: auto;
+		padding: 1em;
+		max-width: 60ch;
 	}
 </style>
