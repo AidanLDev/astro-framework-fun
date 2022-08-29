@@ -21,6 +21,7 @@
       "@components/*": ["src/components/*"],
       "@images/*": ["public/images/*"],
       "@styles/*": ["src/styles/*"]
-    }
+    },
+    "types": ["@astro/image/client"]
   }
 }

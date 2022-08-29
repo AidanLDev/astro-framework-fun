@@ -1,23 +1,23 @@
 ---
+import Img from '@components/Img.astro';
 export interface Props {
 	title: string;
 	body: string;
-	href: string;
+	logo: string;
 }
 
-const { href, title, body } = Astro.props as Props;
+const { logo, title, body } = Astro.props as Props;
 ---
 
 <li class="link-card">
-	<a href={href}>
 		<h2>
 			{title}
 			<span>&rarr;</span>
 		</h2>
+		<Img src={logo} alt={title} />
 		<p>
 			{body}
 		</p>
-	</a>
 </li>
 <style>
 	:root {

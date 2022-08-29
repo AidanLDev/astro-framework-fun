@@ -2,7 +2,32 @@
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 
-const heartEmoji = '❤️';
+const frameworks = [
+	{
+		title: 'React',
+		body: "React, the most used web framework by a longshot, created by Facebook and still maintained by 'Meta', this framework has such a big community you will never be alone when it comes to integrating third party packages or debugging problems."
+	},
+	{
+		title: 'Svelte',
+		body: 'The most popular web framework of recent times, this is a compiler, unlike React/Angular that ship a JavaScript run time to the browser. This makes Svelte high performing while maintaining a small package.'
+	},
+	{
+		title: 'Lit',
+		body: 'A lightweight framework with a footprint of around 5 KB when compressed.'
+	},
+	{
+		title: 'Preact',
+		body: 'A fast React alternative, with a boasted 3 KB footprint'
+	},
+	{
+		title: 'Solid',
+		body: 'This framework has no Virtual DOM, making it effecient.',
+	},
+	{
+		title: 'Vue',
+		body: 'One of the most popular web frameworks, coming just behind Angular in the 2022 Stackoverflow survey, it has a big commited community making getting support for your deving easy.'
+	}
+]
 ---
 
 <Layout title="Astro Boilerplate">
@@ -12,14 +37,7 @@ const heartEmoji = '❤️';
 			Check out the <code>src/pages</code> directory to get started.<br />
 			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
 		</p>
-			<!-- 
-				Lit
-				Preact
-				React
-				Solid
-				Svelte
-				Vue
-			 -->
+		{frameworks.map(framework => <Card logo={`${framework.title}.png`} body={framework.body} title={framework.title}/>)}
 	</main>
 </Layout>
 

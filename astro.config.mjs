@@ -5,13 +5,14 @@ import react from '@astrojs/react';
 import lit from "@astrojs/lit";
 import preact from "@astrojs/preact";
 import solidJs from "@astrojs/solid-js";
-
 import svelte from "@astrojs/svelte";
+
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
   // site: TODO: Add site URL here e.g. https://stargazers.club
   output: 'server',
   adapter: netlify(),
-  integrations: [sitemap(), react(), lit(), preact(), solidJs(), svelte()]
+  integrations: [sitemap(), react(), lit(), preact(), solidJs(), svelte(), image()]
 });
