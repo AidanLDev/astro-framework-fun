@@ -2,7 +2,8 @@
 import Layout from "src/layouts/Layout.astro";
 import ReactApp from "@components/ReactApp";
 ---
-
+<div class='react-app-wrapper'>
 <Layout title="React Component">
-  <ReactApp />
+  <ReactApp client:load />
 </Layout>
+</div>

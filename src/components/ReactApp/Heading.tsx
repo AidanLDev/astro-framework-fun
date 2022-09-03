@@ -12,8 +12,12 @@ export default function Heading({title}: Props) {
   
   return (
     <>
-      <h1 className={Styles.heading}>{title}</h1>
-      <img src={logo} className={Styles.appLogo} alt="logo" />
+      <div className='center'>
+        <h1 className={Styles.heading}>{title}</h1>
+        </div>
+      <div className='center'>
+        <img src={logo} className={Styles.appLogo} alt="logo" />
+      </div>
     </>
   )
 }
