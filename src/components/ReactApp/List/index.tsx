@@ -6,8 +6,8 @@ interface IProps {
 
 export default function List({items}: IProps) {
   return (
-    <ul>
+    <div>
       {items.map((item, idx) => <ListItem key={`${item}__${idx}`} item={item} />)}
-    </ul>
+    </div>
   )
 }
