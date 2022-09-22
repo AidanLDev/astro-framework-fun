@@ -1,0 +1,15 @@
+@import '../../styles/vars.scss';
+
+.navWrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  a {
+    text-decoration: none;
+    font-weight: 500;
+    color: $dark-green;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
